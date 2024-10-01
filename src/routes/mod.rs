@@ -1,0 +1,10 @@
+pub mod about;
+pub mod blogs;
+pub mod contact;
+pub mod index;
+pub mod login;
+pub mod privacy;
+pub mod profile;
+pub mod signup;
+pub mod terms;
+pub mod write_blog;

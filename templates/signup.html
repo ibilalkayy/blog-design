@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %} Signup {% endblock %}
+
+{% block content %}
+	<div class="pt-8">
+		<h1 class="text-6xl font-bold pb-6 text-center"> Signup </h1>
+
+		<div class="py-6">
+			<form hx-post="/signup" hx-target="#signup-message" class="flex flex-col border-t border-gray-200 shadow-lg rounded-xl p-10 ml-20 mr-20">
+	
+				<h1 class="font-bold text-3xl"> Create an Account </h1><br>
+		
+				<label for="username" class="text-xl"> Username </label><br>
+				<input type="text" name="username" placeholder="Enter your username" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+	
+				<label for="email" class="text-xl"> Email </label><br>
+				<input type="email" name="email" placeholder="Enter your email address" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+		
+				<label for="password" class="text-xl"> Password </label><br>
+				<input type="password" name="password" placeholder="Enter your password" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+					
+				<p> Already have an account? <a href="/login" class="font-bold text-blue-500 hover:text-gray-700"> Login </a> here.</p>
+				<button type="submit" class="text-xl bg-black hover:bg-gray-800 text-white rounded-xl mt-4 p-4 w-24"> Signup </button>
+			</form>
+
+			<div id="signup-message" class="mt-6"></div>
+		</div>
+	</div>
+{% endblock %}

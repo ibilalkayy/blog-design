@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %} Write a Blog {% endblock %}
+
+{% block content %}
+	<div>
+		<h1 class="text-6xl font-bold pb-6 text-center"> Blog Post </h1>
+
+		<div class="py-8">
+			<form hx-post="/write_blog" hx-target="#blog-message" class="flex flex-col border-t border-gray-200 shadow-lg rounded-xl p-10 ml-20 mr-20">
+	
+				<h1 class="font-bold text-3xl"> Write a Blog </h1><br>
+		
+				<label for="picture" class="text-xl"> Upload a Picture </label><br>
+				<input type="file" name="picture_name" placeholder="Enter your name" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+	
+				<label for="title" class="text-xl"> Title </label><br>
+				<input type="text" name="title" placeholder="Enter your blog title" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+		
+				<label for="blog_post" class="text-xl"> Blog Post </label><br>
+				<textarea name="blog_post" rows="12" cols="20" class="p-2 rounded-md h-84 border-2 border-stone-500" placeholder="Write your blog post..."></textarea>
+
+				<button type="submit" class="bg-black hover:bg-gray-800 text-white rounded-xl mt-6 p-4 w-24"> Write </button>
+			</form>
+
+			<div id="blog-message" class="mt-6"></div>
+		</div>
+	</div>
+{% endblock %}

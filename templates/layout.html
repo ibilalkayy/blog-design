@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> {% block title %} {% endblock %} </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.2" integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ" crossorigin="anonymous"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="py-2 border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="hover:scale-105 transform transition-transform duration-300 hover:text-gray-700">
+                <a href="/">
+                    <h1 class="font-sans text-5xl py-2"> Blog </h1>
+                    <h3 class="font-serif text-xl ml-5"> DESIGN </h3>
+                </a>
+            </div>
+            <nav>
+                <ul class="flex space-x-8 text-2xl">
+                    <li class="hover:text-gray-700 transition-transform duration-300 transform hover:scale-105"><a href="/">Home</a></li>
+                    <li class="hover:text-gray-700 transition-transform duration-300 transform hover:scale-105"><a href="/about_us">About Us</a></li>
+                    <li class="hover:text-gray-700 transition-transform duration-300 transform hover:scale-105"><a href="/contact_us">Contact Us</a></li>
+                    <li class="hover:text-gray-700 transition-transform duration-300 transform hover:scale-105"><a href="/signup">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto py-8">
+        <h1>{% block content %} {% endblock %}</h1>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-30 border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <ul class="flex space-x-4">
+                <li class="hover:scale-110 transform transition-transform duration-200"><a href="https://x.com/ibilalkayy" target="_blank"><img src="../assets/x.png" alt="X" class="w-14 h-8"></a></li>
+                <li class="hover:scale-110 transform transition-transform duration-200"><a href="https://linkedin.com/in/ibilalkayy" target="_blank"><img src="../assets/linkedin.png" alt="LinkedIn" class="w-14 h-8"></a></li>
+                <li class="hover:scale-110 transform transition-transform duration-200"><a href="https://youtube.com/@coderoamer" target="_blank"><img src="../assets/youtube.png" alt="YouTube" class="w-14 h-8"></a></li>
+            </ul>
+            <ul class="flex space-x-8 text-2xl">
+                <li class="hover:text-gray-700 transition-transform duration-300 transform hover:scale-105"><a href="/terms_and_conditions">Terms and Conditions</a></li>
+                <li class="hover:text-gray-700 transition-transform duration-300 transform hover:scale-105"><a href="/privacy_policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+

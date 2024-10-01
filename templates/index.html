@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+	<div>
+		<form action="/write_blog" method="get" class="flex">
+			<button type="submit" class="bg-black hover:bg-gray-800 text-white rounded-xl p-4 ml-auto"> Write a Blog </button>
+		</form>
+
+		<div class="grid grid-cols-2 gap-4 justify-items-center py-12">
+			<div class="w-3/4">
+				<img src="../assets/tourism.jpg" alt="tourism" class="h-96 w-full rounded-xl">
+				<a href="/blogs">
+					<p class="pt-4 pb-5 text-xl text-center bg-black text-white hover:bg-gray-800 rounded-xl"> How to go <br>for tourism? </p>
+				</a>
+			</div>
+
+			<div class="w-3/4">
+				<img src="../assets/airplane.jpg" alt="airplane" class="h-96 w-full rounded-xl">
+				<a href="/blogs">
+					<p class="pt-4 pb-5 text-xl text-center bg-black text-white hover:bg-gray-800 rounded-xl"> What was your <br>experience in an airplane? </p>
+				</a>
+			</div>
+
+			<div class="w-3/4 py-12">
+				<img src="../assets/camera.jpg" alt="tourism" class="h-96 w-full rounded-xl">
+				<a href="/blogs">
+					<p class="pt-4 pb-5 text-xl text-center bg-black text-white hover:bg-gray-800 rounded-xl"> What kind of quality <br>pictures I take?</p>
+				</a>
+			</div>
+			<div class="w-3/4 py-12">
+				<img src="../assets/breakfast.jpg" alt="airplane" class="h-96 w-full rounded-xl">
+				<a href="/blogs">
+					<p class="pt-4 pb-5 text-xl text-center bg-black text-white hover:bg-gray-800 rounded-xl"> What is the healthy<br>breakfast? </p>
+				</a>
+			</div>
+		</div>
+
+		<form class="flex justify-center">
+			<button type="submit" class="bg-black hover:bg-gray-800 text-white rounded-xl p-4 -mt-6"> Show more </button>
+		</form>
+		
+		<div class="py-12">
+			<form hx-post="/" hx-target="#comment-message" class="flex flex-col border-t border-gray-200 shadow-lg rounded-xl p-10 ml-20 mr-20">
+	
+				<h1 class="font-bold text-3xl"> Leave a Comment </h1><br>
+		
+				<label for="name" class="text-xl"> Name </label><br>
+				<input type="text" name="name" placeholder="Enter your name" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+	
+				<label for="email" class="text-xl"> Email </label><br>
+				<input type="email" name="email" placeholder="Enter your email address" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+		
+				<label for="comment" class="text-xl"> Comment </label><br>
+				<textarea name="comment" rows="12" cols="20" class="p-2 rounded-md h-84 border-2 border-stone-500" placeholder="Enter your comment here..."></textarea>
+
+				<button type="submit" class="text-xl bg-black hover:bg-gray-800 text-white rounded-xl mt-6 p-4 w-24"> Post </button>
+			</form>
+			<div id="comment-message" class="mt-6"></div>
+		</div>
+	</div>
+{% endblock %}

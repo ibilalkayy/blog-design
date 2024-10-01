@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+	<div>
+		<h1 class="text-6xl font-bold pb-6 text-center"> Login </h1>
+
+		<div class="py-12">
+			<form class="flex flex-col border-t border-gray-200 shadow-lg rounded-xl p-10 ml-20 mr-20">
+	
+				<h1 class="font-bold text-3xl"> Welcome back </h1><br>
+	
+				<label for="email" class="text-xl"> Email </label><br>
+				<input type="email" name="email" placeholder="Enter your email address" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+		
+				<label for="password" class="text-xl"> Password </label><br>
+				<input type="password" name="password" placeholder="Enter your password" class="p-2 rounded-md h-12 border-2 border-stone-500"><br>
+					
+				<p> Don't have an account? <a href="/signup" class="font-bold text-blue-500 hover:text-gray-700"> Signup </a> here.</p>
+				<button type="submit" class="text-xl bg-black hover:bg-gray-800 text-white rounded-xl mt-4 p-4 w-24"> Login </button>
+			</form>
+		</div>
+	</div>
+{% endblock %}
